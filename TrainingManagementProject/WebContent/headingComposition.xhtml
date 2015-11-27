@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:outputScript library="js" name="heading.js" />
+<ui:composition template="/templatesDashboard/template.xhtml">
+	<!-- 	<ui:define name="header">
+	    Add your header here or delete to use the default
+	</ui:define>
+ -->
+	<ui:define name="content">
+		<ui:include src="/templatesDashboard/sidemenu.xhtml" />
+
+		<div id="dashboardDiv">
+			<div id="headingFormTitleDiv">Create Detail Training Plan</div>
+
+			<div id="top-dashboardDiv">
+				<ul>
+					<li><a href="#dashboardTab2">Sub Heading</a></li>
+					<li><a href="#dashboardTab1">Main Heading</a></li>
+				</ul>
+				<div id="dashboardTab1">
+					<h:form prependId="false">
+					<table>
+						<tr>
+							<th>Course Title</th>
+							<td><h:selectOneMenu id="headingDetails"
+									value="#{mainHeadingBean.courseTitle}" style="width:200px;">
+									<f:selectItems value="#{mainHeadingBean.courses}" />
+								</h:selectOneMenu></td>
+						</tr>
+
+						<tr>
+							<th>Heading</th>
+							<td><h:inputText id="heading" class="trainingDetails"
+									value="#{mainHeadingBean.headingTitle}" style="width:193px;" /></td>
+						</tr>
+
+						<tr>
+							<td colspan="2"><h:commandButton id="save" type="submit"
+									value="SAVE" class="commandButton"
+									action="#{mainHeadingBean.saveCourseHeading}" /> <h:commandButton
+									id="savemore" type="submit" value="SAVE AND ADD MORE"
+									class="commandButton"
+									action="#{mainHeadingBean.saveMoreHeading}" /> <h:outputLink
+									value="courseComposition.xhtml" id="cancel"
+									class="commandButton" style="color:blue; text-decoration: none">Cancel</h:outputLink>
+							</td>
+						</tr>
+
+					</table>
+					</h:form>
+				</div>
+				<div id="dashboardTab2">
+				<h:form prependId="false">
+					<table>
+						<tr>
+							<th>Course Title</th>
+							<td><h:selectOneMenu id="subHeadingCourseTitle"
+									value="#{subHeadingBean.courseTitle}" style="width:200px;" valueChangeListener="#{subHeadingBean.getHeadingList}" onchange="submit()">
+									<f:selectItems value="#{mainHeadingBean.courses}" />
+								</h:selectOneMenu></td>
+						</tr>
+
+						<tr>
+							<th>Heading</th>
+							<td><h:selectOneMenu id="subHeadingHeadingTitle"
+									value="#{subHeadingBean.headingTitle}" style="width:200px;">
+									<f:selectItems value="#{subHeadingBean.headings}" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<th>Sub-Heading</th>
+							<td><h:inputText id="subHeadingTitle"
+									class="trainingDetails"
+									value="#{subHeadingBean.subHeadingTitle}" style="width:193px;" /></td>
+						</tr>
+
+						<tr>
+							<th>Status</th>
+							<td><h:selectOneMenu value="#{subHeadingBean.status}"
+									id="subHeadingStatus">
+									<f:selectItem itemLabel="NOT-COMPLETE" itemValue="NOT-COMPLETE" />
+									<f:selectItem itemLabel="PENDING" itemValue="PENDING" />
+									<f:selectItem itemLabel="COMPLETE" itemValue="COMPLETE" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<h:commandButton id="subHeadingSave"
+									type="submit" value="SAVE" class="commandButton"
+									action="#{subHeadingBean.save}" /> 
+							<h:commandButton
+									id="subHeadingSavemore" type="submit" value="SAVE AND ADD MORE"
+									class="commandButton" action="#{subHeadingBean.saveSubHeadingAndReturn}" /> 
+							<h:outputLink value="courseComposition.xhtml" id="sunHeadingCancel" class="commandButton" style="color:blue; text-decoration: none">Cancel</h:outputLink>
+							</td>
+						</tr>
+
+					</table>
+					</h:form>
+				</div>
+				<h:outputLink value="courseComposition.xhtml"
+					style="color:blue; text-decoration: none">Courses</h:outputLink>
+			</div>
+
+
+		</div>
+
+	</ui:define>
+	<!-- 	<ui:define name="footer">
+	    Add your footer here or delete to use the default
+	</ui:define> -->
+</ui:composition>
+</html>

@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+
+#footerDiv {
+	border: 1px solid grey;
+	height: 100px;
+	width: 1410px;
+	float: left;
+	color: black;
+	margin-top: 1%;
+}

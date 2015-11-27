@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templatesDashboard/template.xhtml">
+	<!-- <ui:define name="header">
+	    Add your header here or delete to use the default
+	</ui:define> -->
+	<ui:define name="content">
+		<h:form prependId="false">
+			<div id="mainContainerDiv">
+
+				<div id="middleDiv">
+					<ui:include src="/templatesDashboard/sidemenu.xhtml" />
+
+					<div id="dashboardDiv">
+
+						<div id="top-dashboardDiv">
+							<ul>
+								<li><a href="#dashboardTab1">DASHBOARD</a></li>
+								<li><a href="#dashboardTab2">ACTIVITY</a></li>
+							</ul>
+							<div id="dashboardTab1">
+								<div class="top-dashboardMenus">
+									<div id="dashboardMenuCircle1" class="dashboardMenuCircles">
+										<div class="insideCircleValueDiv">
+											<h:outputText value="#{courseBean.activeCourseCount}" />
+										</div>
+									</div>
+									<div class="top-dashboardMenusLables">Active Courses</div>
+								</div>
+								<div class="top-dashboardMenus">
+									<div id="dashboardMenuCircle2" class="dashboardMenuCircles">
+										<div class="insideCircleValueDiv">
+											<h:outputText value="#{courseBean.totalCourseCount}" />
+										</div>
+									</div>
+									<div class="top-dashboardMenusLables">Total Courses</div>
+								</div>
+								<div class="top-dashboardMenus">
+									<div id="dashboardMenuCircle3" class="dashboardMenuCircles">
+										<div class="insideCircleValueDiv">0</div>
+									</div>
+										<div class="top-dashboardMenusLables">Total Users</div>
+								</div>
+								<div class="top-dashboardMenus">
+									<div id="dashboardMenuCircle4" class="dashboardMenuCircles">
+										<div class="insideCircleValueDiv">0</div>
+									</div>
+										<div class="top-dashboardMenusLables">Active Users</div>
+								</div>
+							</div>
+							<div id="dashboardTab2">hello</div>
+						</div>
+
+						<div id="middle-dashboardDiv">
+							<div id="middle-dashboardLeft" class="middle-dashboardSections">
+								<div id="middle-dashboardLeft-TitleDiv"
+									style="padding-top: 2.5%;">
+									<div style="float: left; padding-left: 2.5%; size: auto;">HISTORICAL</div>
+									<div style="padding-left: 68.5%; size: auto;">
+										<h:selectOneMenu style="border-radius: 16px; width:145px;">
+											<f:selectItem itemValue="" itemLabel="Courses Completed!" />
+											<f:selectItem itemValue="course1" itemLabel="course1" />
+											<f:selectItem itemValue="course2" itemLabel="course2" />
+											<f:selectItem itemValue="course3" itemLabel="course3" />
+										</h:selectOneMenu>
+									</div>
+								</div>
+								<div id="middle-dashboardLeft-ContentDiv"></div>
+
+							</div>
+							<div id="middle-dashboardRight" class="middle-dashboardSections">
+								<div id="middle-dashboardRight-TitleDiv"
+									style="padding-left: 2.5%; padding-top: 2.5%;">ASSIGNMENT-SUBMISSION</div>
+								<div id="middle-dashboardRight-ContentDiv"></div>
+							</div>
+
+						</div>
+						<div id="bottom-dashboardDiv">
+							<div id="bootom-Dashboard-graphDiv"
+								style="background-color: #D3D3D3; border-radius: 10px; height: 88%; margin: .5% .5% 1% .5%;"></div>
+						</div>
+					</div>
+					<div id="rightActionDiv">
+						<div id="actionTitleDiv">ACTIONS</div>
+						<div id="actionMenuDiv">
+							<h:commandButton class="actionButtons"
+								value="CREATE A COURSE           >" action="courseComposition" />
+							<br />
+							<h:commandButton class="actionButtons"
+								value="CREATE A USER               >" />
+							<br />
+							<h:commandButton class="actionButtons"
+								value="CREATE A TEAM              >" />
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</h:form>
+	</ui:define>
+
+	<!-- <ui:define name="footer">
+	    Add your footer here or delete to use the default
+	</ui:define> -->
+
+
+</ui:composition>
+</html>

@@ -1,0 +1,131 @@
+@CHARSET "ISO-8859-1";
+
+@import
+	url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+	background-image:
+		url("http://7-themes.com/data_images/out/76/7030767-3d-background-wallpaper.jpg");
+		background-repeat: no-repeat;
+		
+	font-family: 'Open Sans', sans-serif;
+}
+
+#loginDiv {
+	width: 50%;
+	background: #f0f0f0;
+}
+
+#registerDiv {
+	width: 50%;
+	background: #f0f0f0;
+}
+
+#loginDiv h1 {
+	background: #3399cc;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+}
+
+#registerDiv h1 {
+	background: #3399cc;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+}
+
+#toggle-signIn {
+	width: 92%;
+}
+
+#registerSpan {
+	width: 92%;
+}
+
+.form-button {
+	width: 100px;
+	
+	background: #3399cc;
+	border: 0;
+	padding: 4%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+	float: left;
+	margin-left: 30px;
+}
+/* /* 
+#register {
+	width: 30%;
+	background: #3399cc;
+	border: 0;
+	padding: 4%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+	float: left;
+	margin-left: 30px;
+}
+
+#signIn {
+	width: 30%;
+	background: #3399cc;
+	border: 0;
+	padding: 4%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+	float: left;
+	margin-left: 30px;
+}
+
+#signUp {
+	width: 30%;
+	background: #3399cc;
+	border: 0;
+	padding: 4%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+	float: left;
+	margin-left: 30px;
+}
+
+.button {
+	width: 70px;
+	background: #3399cc;
+	display: block;
+	margin: 0 auto;
+	margin-top: 1%;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	transition: background .3s;
+	-webkit-transition: background .3s;
+}
+
+.button:hover {
+	background: #2288bb;
+}
+ */
+*
+/

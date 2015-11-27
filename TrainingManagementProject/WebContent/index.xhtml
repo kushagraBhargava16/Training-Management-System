@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>INDEX PAGE</title>
+	<script src="jquery/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript" src="jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="jquery/index.js"></script>
+	<script type="text/javascript" src="jquery/register.js"></script>
+	<script src="jquery.cookie.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<style>
+.error {
+	color: red;
+}
+</style>
+
+</h:head>
+<h:body  style="margin-left:550px;margin-top:200px;">
+	<div id="bodyDiv">
+		
+		<div id="loginDiv">
+			<center>
+			<span href="#" class="button" id="toggle-signIn"><h1>SignIn!</h1></span>
+			<h:form prependId="false">
+				<table id="loginForm" >
+					<tr>
+						<td><h:outputText value="#{param['message']}" class="error" /></td>
+
+					</tr>
+					<tr>
+						<td>USERNAME:</td>
+						<td><h:inputText id="username" value="#{userBean.username}"
+								required="true" requiredMessage="PLEASE ENTER USERNAME">
+							</h:inputText> 
+							</td>
+					</tr>
+					<tr><td colspan="2"><h:message for="username" class="red" /></td></tr>
+					<tr><td colspan="2"><span id="user"></span></td></tr>
+					<tr>
+						<td>PASSWORD:</td>
+						<td><h:inputSecret id="password" value="#{userBean.password}"
+								required="true" requiredMessage="PLEASE ENTER CORRECT PASSWORD">
+							</h:inputSecret>
+							</td>
+					</tr>
+					<tr><td colspan="2"><h:message for="password" class="red" /></td></tr>
+					<tr><td colspan="2"><span id="pass"></span></td></tr>
+
+					<tr>
+						<td><h:selectBooleanCheckbox id="rememberMe" value="#{userBean.rememberMe}"/>REMEMBER ME</td>
+					</tr>
+
+					<tr>
+						<td><h:commandButton id="signIn" type="submit"
+								value="SIGN IN" action="#{userBean.authenticateUser}"  class="form-button"/></td>
+						<td><h:commandButton id="signUp" 
+								value="SIGN UP" type="button" action="register.xhtml" class="form-button"/></td>
+					</tr>
+				</table>
+
+			</h:form>
+			</center>
+		</div>
+		<div id="registerDiv" style="display: none;" title="Regitration Form!">
+		<center>
+			<h:form prependId="false">
+				<table>
+					<tr>
+						<td>NAME</td>
+						<td><h:inputText id="name" value="#{userBean.name}"
+								required="true" requiredMessage="PLEASE ENTER NAME"
+								validatorMessage="NAME SHOULD BE OF ATLEAST 3 CHARACTERS">
+								<f:validateLength minimum="3" maximum="15" />
+							</h:inputText> <span id="spanName"></span></td>
+						<td><h:message for="name" class="red" /></td>
+					</tr>
+
+					<tr>
+						<td>CONTACT</td>
+						<td><h:inputText id="contact" value="#{userBean.contact}"
+								required="true" requiredMessage="PLEASE ENTER CONTACT"
+								validatorMessage="PLEASE ENTER VALID CONTACT NUMBER">
+								<f:validateLength minimum="10" maximum="10" />
+							</h:inputText> <span id="spanContact"></span></td>
+						<td><h:message for="contact" class="red" /></td>
+					</tr>
+
+					<tr>
+						<td>EMAIL</td>
+						<td><h:inputText id="email" value="#{userBean.emailid}"
+								required="true" requiredMessage="PLEASE ENTER EMAIL ADDRESS"
+								validatorMessage="PLEASE ENTER VALID EMAIL ADDRESS">
+								<f:validateRegex
+									pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+							</h:inputText> <span id="spanEmail"></span></td>
+						<td><h:message for="email" class="red" /></td>
+					</tr>
+
+					<tr>
+						<td>DESIGNATION</td>
+						<td><h:selectOneMenu id="designation"
+								value="#{userBean.designation}" required="true"
+								requiredMessage="PLEASE SELECT YOUR DESIGNATION">
+								<f:selectItem itemLabel="TRAINEE" itemValue="3" />
+								<f:selectItem itemLabel="TRAINER" itemValue="2" />
+								<f:selectItem itemLabel="MANAGER" itemValue="1" />
+							</h:selectOneMenu></td>
+						<td><h:message for="designation" class="red" /></td>
+					</tr>
+
+					<tr>
+						<td>USERNAME</td>
+						<td><h:inputText id="registerUsername"
+								value="#{userBean.username}" required="true"
+								requiredMessage="PLEASE ENTER USERNAME">
+							</h:inputText> <span id="spanUser"></span></td>
+						<td><h:message for="registerUsername" class="red" /></td>
+
+					</tr>
+
+					<tr>
+						<td>PASSWORD</td>
+						<td><h:inputText id="registerPassword"
+								value="#{userBean.password}" required="true"
+								requiredMessage="PLEASE ENTER PASSWORD"
+								validatorMessage="PASSWORD MUST CONTAIN  UPPER-CASE , LOWER-CASE ,SPECIAL AND APLHANUMERIC LETTERS">
+								<f:validateRegex
+									pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})" />
+							</h:inputText> <span id="spanPassword"></span></td>
+						<td><h:message for="registerPassword" class="red" /></td>
+					</tr>
+
+					<tr align="left">
+						<td colspan="2" align="center"><h:commandButton id="save" type="submit" value="SAVE"
+								action="#{userBean.registerUser}" /></td>
+					</tr>
+				</table>
+			</h:form>
+			</center>
+		</div>
+	</div>
+</h:body>
+</html>

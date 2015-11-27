@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+
+
+<ui:composition template="/templatesDashboard/template.xhtml">
+
+	<!-- <ui:define name="header.xhtml">
+	</ui:define> -->
+
+	<ui:define name="content">
+					<h:form prependId="false">
+		<div id="courseMainDiv">
+			<ui:include src="/templatesDashboard/sidemenu.xhtml" />
+			<div id="newCourseDiv">
+				<div id="newCourseTitleDiv">Create a New Course</div>
+
+				<div id="courseDetailDiv">
+						<table>
+							<tr>
+								<th>Course Title:</th>
+								<td><h:inputText id="courseTitle" class="courseEntryFields"
+										value="#{courseBean.courseTitle}" /></td>
+
+							</tr>
+
+							<tr>
+								<th>Description:</th>
+								<td><h:inputTextarea id="description"
+										class="courseEntryFields" value="#{courseBean.description}" /></td>
+							</tr>
+
+							<tr>
+								<th>Reference Code:</th>
+								<td><h:inputText id="refernceCode"
+										class="courseEntryFields" value="#{courseBean.refrenceCode}" /></td>
+							</tr>
+
+							<tr>
+								<th>Active</th>
+								<td><h:selectBooleanCheckbox id="active"
+										value="#{courseBean.status}" /></td>
+							</tr>
+
+						</table>
+						<br />
+						<div>
+							<p style="font-size: 20px; margin-left: 20px; color: #2F4F4F;">Course
+								Image (optional)</p>
+							<hr width="96%" />
+							<p style="font-size: 15px; margin-left: 20px;">
+								<strong>Upload an Image :</strong>
+							</p>
+							<hr width="96%" />
+						</div>
+						<h:commandButton value="SAVE" action="#{courseBean.saveCourse}"
+							style="background-color:white; color:#2F4F4F;border-radius:4px; margin-left:20px; width:60px; height:30px;" />
+						or
+						<h:outputLink value="homeComposition.xhtml"
+							style="color:blue; text-decoration: none">Cancel</h:outputLink>
+				</div>
+
+			</div>
+			<div id="notificationsDiv">
+				<div id="notificationTitle">Notifications</div>
+				<div id="notificationContent">By default this course will be
+					active!</div>
+			</div>
+			<div id="redirectHeadingDiv">
+				<h:commandButton  value="Headings" action="headingComposition" style="width:80px;height:30px; background-color:green;color:white;"/>
+			</div>
+		</div>
+
+					</h:form>
+
+	</ui:define>
+
+	<!-- <ui:define name="footer.xhtml">
+	    Add your footer here or delete to use the default
+	</ui:define> -->
+</ui:composition>
+</html>

@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+#headerTitleDiv{
+	size:auto;
+	float: left;
+}
+#headerMenuDiv{
+	margin-left: 80%;
+	font-size: 20px;
+}
+#headerDiv{
+	box-shadow: 5px 5px 1px grey;
+	height: 80px;
+}

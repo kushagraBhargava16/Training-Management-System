@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>managerHome</from-outcome>
+			<to-view-id>/homeComposition.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>homeComposition.xhtml</display-name>
+		<from-view-id>/homeComposition.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>newCourse</from-outcome>
+			<to-view-id>/courseComposition.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>courseComposition.xhtml</display-name>
+		<from-view-id>/courseComposition.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>headingComposition</from-outcome>
+			<to-view-id>/headingComposition.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>headingComposition.xhtml</display-name>
+		<from-view-id>/headingComposition.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>home</from-outcome>
+			<to-view-id>/courseComposition.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>coursesDetailsComposition.xhtml</display-name>
+		<from-view-id>/coursesDetailsComposition.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>detailedCourse</from-outcome>
+			<to-view-id>/detailedCourse.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>trainerHome</from-outcome>
+			<to-view-id>/trainerHome.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>trainerHome.xhtml</display-name>
+		<from-view-id>/trainerHome.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>trainerDetailedCourse</from-outcome>
+			<to-view-id>/trainerDetailedCourse.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>trainerDetailedCourse.xhtml</display-name>
+		<from-view-id>/trainerDetailedCourse.xhtml</from-view-id>
+		<navigation-case>
+			<to-view-id>/trainerDetailedCourse.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

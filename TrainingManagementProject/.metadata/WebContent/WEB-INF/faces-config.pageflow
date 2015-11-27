@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14470440391350" configfile="/TrainingManagementProject/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="120" y="24" id="pf14470441210953" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf14477610395010 pf14484498089070" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="homeComposition.xhtml" x="384" y="24" id="pf14477610395021" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14477616287042" inlinks="pf14477610395010" path="/homeComposition.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="courseComposition.xhtml" x="744" y="24" id="pf14477616287043" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf14478636113781" inlinks="pf14477616287042 pf14478638487353" path="/courseComposition.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="headingComposition.xhtml" x="924" y="36" id="pf14478636113782" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14478638487353" inlinks="pf14478636113781" path="/headingComposition.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="detailedCourse.xhtml" x="957" y="144" id="pf14479404609720" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf14479404609731" path="/detailedCourse.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="coursesDetailsComposition.xhtml" x="660" y="144" id="pf14479404609732" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf14479404609731" path="/coursesDetailsComposition.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="trainerHome.xhtml" x="101" y="240" id="pf14484498089081" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf14484546413822" inlinks="pf14484498089070" path="/trainerHome.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="trainerDetailedCourse.xhtml" x="348" y="240" id="pf14484546413833" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf14484593365644" inlinks="pf14484546413822 pf14484593365644" path="/trainerDetailedCourse.xhtml"/>
+  <links id="pf14477610395010" target="pf14477610395021" source="pf14470441210953" outcome="managerHome" redirect="true"/>
+  <links id="pf14477616287042" target="pf14477616287043" source="pf14477610395021" outcome="newCourse" redirect="true"/>
+  <links id="pf14478636113781" target="pf14478636113782" source="pf14477616287043" outcome="headingComposition" redirect="true"/>
+  <links id="pf14478638487353" target="pf14477616287043" source="pf14478636113782" outcome="home" redirect="true"/>
+  <links id="pf14479404609731" target="pf14479404609720" source="pf14479404609732" outcome="detailedCourse" redirect="true"/>
+  <links id="pf14484498089070" target="pf14484498089081" source="pf14470441210953" outcome="trainerHome" redirect="true"/>
+  <links id="pf14484546413822" target="pf14484546413833" source="pf14484498089081" outcome="trainerDetailedCourse" redirect="true"/>
+  <links id="pf14484593365644" target="pf14484546413833" source="pf14484546413833" redirect="true">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+</pageflow:Pageflow>

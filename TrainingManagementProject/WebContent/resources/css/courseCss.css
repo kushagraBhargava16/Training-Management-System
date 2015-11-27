@@ -1,0 +1,89 @@
+@CHARSET "ISO-8859-1";
+
+#courseMainDiv {
+	/* border: 1px solid black; */
+	height: 600px;
+	width: 99.8%;
+	margin-top: .5%;
+	float: left;
+	box-shadow: 5px 5px 1px grey;
+	border-radius: 16px;
+}
+
+#newCourseDiv {
+	border: 1px solid blue;
+	height: 98%;
+	width: 70%;
+	margin-left: 1%;
+	margin-top: .6%;
+	float: left;
+	background-color: white;
+}
+
+#newCourseTitleDiv {
+	width: 97.4%;
+	background-color: #D3D3D3;
+	font-size: 30px;
+	margin-left: .3%;
+	margin-top: .3%;
+	/* padding-left: 10px;
+	padding-top: 10px; */
+	color: #2F4F4F;
+	
+	height: 70px;
+	padding-left: 2%;
+	padding-top: 10px;
+}
+
+#courseDetailDiv {
+	margin-left: 1%;
+	margin-top: 1%;
+	/* 	border: 1px solid black; */
+	width: 98%;
+}
+
+th {
+	width: 130px;
+	text-align: right;
+	color: #2F4F4F;
+	vertical-align: top;
+}
+
+.courseEntryFields {
+	size: 150px;
+	width: 700px;
+	border: 1px solid #D3D3D3;
+	height: 30px;
+	border-radius: 4px;
+}
+
+#description {
+	height: 180px;
+	resize: none;
+}
+
+#notificationsDiv {
+	margin-left: 77%;
+	margin-top: .6%;
+	width: 320px;
+	height: 300px;
+	background-color: white;
+	width: 320px;
+	padding-left: 2px;
+	padding-top: 3px;
+}
+
+#notificationTitle {
+	margin-left: .3%;
+	height: 15%;
+	background-color: #D3D3D3;
+	color: #2F4F4F;
+	width: 98%;
+	padding-left: 6px;
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+#notificationContent {
+	color: #2F4F4F;
+}

@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+
+#mainTableDiv-heading {
+	height: 5%;
+	width: 98%;
+	color: white;
+	font-size: 20px;
+	margin-top: .5%;
+	margin-left: .5%;
+	background-color: #778899;
+	padding-top: 10px;
+	vertical-align: middle;
+}
+
+#mainTableDiv-Table {
+	float: left;
+	margin-left: .5%;
+	margin-top: .5%;
+	width: 92.8%;
+	text-align: center;
+/* 	border: 1px solid blue;
+ */	padding-left: 39px;
+	background-color: white;
+}
+
+#mainTableDiv {
+	/* border: 1px solid green; */
+	width: 700px;
+	height: 800px;
+	margin-left: 10%;
+	/* background-color: white; */
+	margin-top: 2%;
+	text-align: center;
+}
+
+.courseDetailsButtons {
+	background-color: #2F4F4F;
+	color: white;
+	border-radius: 4px;
+	font-size: 12px;
+	width: 100px;
+	height: 30px;
+}
