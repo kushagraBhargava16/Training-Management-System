@@ -118,7 +118,7 @@ public class UserBean {
 				}else if(user.getDesignation()==2){
 					returnString = "trainerHome";
 					}else{
-					returnString = "trainerHome";
+					returnString = "traineeHome";
 					
 				}
 			} else {
@@ -157,7 +157,7 @@ public class UserBean {
 	@Remove
 	public String logout() {
 		System.out.println("++++++++++++++++++++++++++++++++++in logout+++++++++++++");
-		session.invalidate();
+		//session.invalidate();
 		
 		return "index.xhtml?faces-redirect=true&message=Logout Successful";
 	}

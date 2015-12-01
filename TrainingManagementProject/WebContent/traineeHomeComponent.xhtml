@@ -7,14 +7,26 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/TraineeTemplate/template.xhtml">
-	
+
 	<ui:define name="content">
-	   <h:form prependId="false">
-	   	<div>
-	   	This is my world !The world of trainees!
-	   	</div>
-	   </h:form>
+		<h:form prependId="false" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>
+						<h3>SUBMIT YOUR ASSIGNMENT</h3>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><h:inputFile value="#{traineeBean.file}"></h:inputFile>
+					</td>
+				</tr>
+			</table>
+
+			<h:commandButton action="#{traineeBean.uploadFileValue}"
+				value="SUBMIT"></h:commandButton>
+
+		</h:form>
 	</ui:define>
-	
+
 </ui:composition>
 </html>
