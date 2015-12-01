@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<h:outputStylesheet library="css" name="header.css" />
+</h:head>
+<h:body>
+<h:form prependId="false">
+	<div id="headerDiv">
+		<div id="headerTitleDiv">
+			<img src="titleIcon.png" alt="T.M.P." />
+		</div>
+		<div id="headerMenuDiv">
+			Welcome!
+			<h:outputText value="#{userBean.name}" />
+
+			<h:commandButton value="Logout" type="submit"
+				style="background-color:orange; color:white;border-radius:4px; font-size:18px; width:80px; height:30px;"
+				action="#{userBean.logout}" />
+		</div>
+	</div>
+	</h:form>
+</h:body>
+</html>
