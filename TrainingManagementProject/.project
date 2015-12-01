@@ -88,7 +88,7 @@
 		<link>
 			<name>WebContent/resources/css/jquery-ui.css</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Desktop/jquery-ui.css</locationURI>
+			<locationURI>PARENT-4-PROJECT_LOC/Desktop/jquery-ui.css</locationURI>
 		</link>
 		<link>
 			<name>WebContent/resources/js/canvasjs.js</name>

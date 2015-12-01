@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
 	$('#signUp').click(function() {
 		$("#registerDiv").dialog({
@@ -6,7 +6,7 @@ $(document).ready(function() {
 			width : 600
 		});
 	});
-});
+});*/
 $(document).ready(function() {
 	$('#username').focusin(function() {
 		$('#username').addClass('box');

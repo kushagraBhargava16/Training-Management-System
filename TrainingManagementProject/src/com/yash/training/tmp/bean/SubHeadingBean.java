@@ -29,11 +29,6 @@ public class SubHeadingBean {
 	SubHeadingServiceEJBRemote subHeadingService;
 	@EJB
 	HeadingServiceEJBRemote headingService;
-	@EJB
-	CourseServiceEJBRemote courseService;
-	@Inject
-	CourseBean courseBean;
-
 
 	public String getStatus() {
 		return status;
@@ -78,7 +73,6 @@ public class SubHeadingBean {
 
 	public int getHeadingId() {
 		headingId = subHeadingService.getHeadingIdByTitle(headingTitle);
-		// System.out.println("++++++++++++++++++++++++++++++++"+headingId);
 		return headingId;
 	}
 
@@ -92,11 +86,6 @@ public class SubHeadingBean {
 		return headings;
 	}
 
-	/*
-	 * public List getHeadings() { int courseId =
-	 * headingService.getCourseIdByTitle(courseTitle); headings =
-	 * subHeadingService.getAllHeadings(); return headings; }
-	 */
 	public void setHeadings(List headings) {
 		this.headings = headings;
 	}
@@ -122,15 +111,8 @@ public class SubHeadingBean {
 		return "#";
 	}
 
-	public String save() {
-		System.out.println("+++++++++++++++++++++++++++++++++++++++hello");
-		return "home";
-	}
-
 	public void getHeadingList(ValueChangeEvent e) {
 
-		// System.out.println("------------------------------------------------------------inside
-		// getHeading()--------------------------------"+e.getNewValue().toString());
 		courseTitle = e.getNewValue().toString();
 		int courseId = headingService.getCourseIdByTitle(courseTitle);
 		headings = subHeadingService.getAllHeadingsByCourseId(courseId);
@@ -138,16 +120,4 @@ public class SubHeadingBean {
 				+ "___________________________________________________");
 	}
 
-	public String changeSubHeadingStatus() {
-		subHeadingService.updateSubheadingStatus(status, subHeadingId);
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+subHeadingId);
-		
-		/*courseBean.setCourseId();
-		courseBean.getAllDetails();*/
-		/*courseBean.setCourse(null);
-		courseBean.setCourse(courseService.getAllCourseDetails(courseBean.getCourseIdByTitle(courseTitle)));
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+courseBean.getCourse());
-		*/
-		return "#";
-	}
 }

@@ -67,7 +67,7 @@ public class CourseServiceEJB implements CourseServiceEJBRemote {
 	}
 
 	@Override
-	public List getActiveCourses(int user_id) {
+	public List getActiveCourses() {
 		String sql = "select * from courses where status=1";
 		List courses = new ArrayList();
 		ResultSet resultSet = DBUtil.select(sql);
@@ -177,10 +177,10 @@ public class CourseServiceEJB implements CourseServiceEJBRemote {
 
 				ResultSet resultSetHeading = DBUtil.select(headingSql);
 
-				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$course" + course);
+				/*System.out.println("$$$$$$$$$$$$$$$$$$$$$$$course" + course);
 				System.out.println(headingSql);
 				System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>is first" + resultSetHeading.isFirst()
-						+ ">>>>>>>>>>>>>>>>>is last" + resultSetHeading.isLast());
+						+ ">>>>>>>>>>>>>>>>>is last" + resultSetHeading.isLast());*/
 
 				while (resultSetHeading.next()) {
 
@@ -194,7 +194,7 @@ public class CourseServiceEJB implements CourseServiceEJBRemote {
 
 					heading.setHeadingTitle(resultSetHeading.getString("heading"));
 
-					System.out.println("%%%%%%%%%%%%%%%%%heading" + heading);
+					/*System.out.println("%%%%%%%%%%%%%%%%%heading" + heading);*/
 
 					headingList.add(heading);
 
@@ -203,9 +203,9 @@ public class CourseServiceEJB implements CourseServiceEJBRemote {
 
 					ResultSet resultSetSubHeading = DBUtil.select(subHeadingSql);
 
-					System.out.println(subHeadingSql);
+					/*System.out.println(subHeadingSql);
 					System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>is first" + resultSetSubHeading.isFirst()
-							+ ">>>>>>>>>>>>>>>>>is last" + resultSetSubHeading.isLast());
+							+ ">>>>>>>>>>>>>>>>>is last" + resultSetSubHeading.isLast());*/
 					while (resultSetSubHeading.next()) {
 
 						SubHeading subHeading = new SubHeading();
@@ -219,7 +219,7 @@ public class CourseServiceEJB implements CourseServiceEJBRemote {
 						subHeading.setSubHeadingTitle(resultSetSubHeading.getString("subheading"));
 
 						subHeadingList.add(subHeading);
-						System.out.println("@@@@@@@@@@@@@@@@@@@@@Subheading" + subHeading);
+					/*	System.out.println("@@@@@@@@@@@@@@@@@@@@@Subheading" + subHeading);*/
 
 					}
 					heading.setSubHeadingList(subHeadingList);
@@ -238,7 +238,7 @@ public class CourseServiceEJB implements CourseServiceEJBRemote {
 	@Override
 	public void deleteCourse(int selectedCourseId) {
 	String sql="delete from courses where courses_id='"+selectedCourseId+"'";
-	System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++in ejb delete++++++++++++++++++++++"+sql);
+	/*System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++in ejb delete++++++++++++++++++++++"+sql);*/
 	
 	DBUtil.update(sql);
 		

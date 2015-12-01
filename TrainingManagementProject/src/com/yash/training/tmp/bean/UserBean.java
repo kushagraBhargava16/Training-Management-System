@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import javax.ejb.Remove;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpSession;
 
 import com.yash.training.tmp.domain.User;
 import com.yash.training.tmp.service.UserServiceEJBLocal;
+import com.yash.training.tmp.util.DBUtil;
 
 @ManagedBean
 @SessionScoped
@@ -150,12 +152,13 @@ public class UserBean {
 		if (check == 0) {
 			return "#";
 		}
-		return "index";
+		return "index.xhtml?faces-redirect=true&message=Registration Successful!";
 	}
-
+	@Remove
 	public String logout() {
 		System.out.println("++++++++++++++++++++++++++++++++++in logout+++++++++++++");
 		session.invalidate();
+		
 		return "index.xhtml?faces-redirect=true&message=Logout Successful";
 	}
 	

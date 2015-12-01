@@ -86,7 +86,7 @@ public class CourseBean {
 	}
 
 	public List getActiveCoursesList() {
-		activeCoursesList = courseService.getActiveCourses(user.getUser_id());
+		activeCoursesList = courseService.getActiveCourses();
 		return activeCoursesList;
 	}
 
@@ -95,7 +95,7 @@ public class CourseBean {
 	}
 
 	public int getActiveCourseCount() {
-		activeCoursesList = courseService.getActiveCourses(user.getUser_id());
+		activeCoursesList = courseService.getActiveCourses();
 		activeCourseCount = activeCoursesList.size();
 		System.out.println("+++++++++++++++++++++>>>>>>>>>>>>>>" + activeCourseCount);
 		return activeCourseCount;

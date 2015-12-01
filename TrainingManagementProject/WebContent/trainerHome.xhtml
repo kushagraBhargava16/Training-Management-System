@@ -21,7 +21,7 @@
 							<td>TITLE</td>
 							<td style="width: 25%">ACTION</td>
 						</tr>
-						<ui:repeat value="#{courseBean.activeCoursesList}" var="items">
+						<ui:repeat value="#{trainerBean.activeCoursesList}" var="items">
 
 							<tr id="#{items.refrenceCode}">
 								<!-- 	<td><h:selectBooleanCheckbox id="NOIDEA">
@@ -31,10 +31,10 @@
 								<td>#{items.refrenceCode}</td>
 								<td>#{items.courseTitle}</td>
 								<td><h:commandButton value="Details"
-										action="#{courseBean.getAllDetails}"
+										action="#{trainerBean.getAllDetails}"
 										class="courseDetailsButtons">
 										<f:setPropertyActionListener
-											target="#{courseBean.selectedCourseId}"
+											target="#{trainerBean.selectedCourseId}"
 											value="#{items.courseId}" />
 									</h:commandButton></td>
 							</tr>

@@ -14,7 +14,7 @@ public interface CourseServiceEJBRemote {
 
 	List getAllCourses(int i);
 
-	List getActiveCourses(int user_id);
+	List getActiveCourses();
 	
 	int getActiveCourseCount(int user_id);
 	

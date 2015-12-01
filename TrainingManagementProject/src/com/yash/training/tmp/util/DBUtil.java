@@ -5,9 +5,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.annotation.Resource;
+import javax.sql.DataSource;
+
 public class DBUtil {
 	static Connection connection;
-
+	
+	/*@Resource(lookup="java:jboss/datasource/DataDS")
+	DataSource dataSource;*/
 	private static Connection connectDB() {
 		connection = ConnectionProvider.getConnection();
 		System.out.println("connection------->"+connection);
