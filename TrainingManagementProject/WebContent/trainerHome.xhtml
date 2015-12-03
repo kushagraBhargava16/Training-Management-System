@@ -14,7 +14,7 @@
 		<h:form prependId="false">
 			<div id="mainTrainerHomeDiv">
 
-				<div id="trainerTableDiv">
+				<div id="trainerTableDiv" >
 					<table>
 						<tr style="background-color: #D3D3D3; color: #2F4F4F;">
 							<td>REFERENCE_NO</td>
@@ -42,6 +42,14 @@
 						</ui:repeat>
 					</table>
 				</div>
+			</div>
+			<div >
+				<ui:repeat value="#{trainerBean.filesList}" var="files">
+					<h:commandLink value="#{files}" action="#{trainerBean.downloadFile}">
+						<f:param name="fileName" value="#{files}"></f:param>
+					</h:commandLink>
+					<br />
+				</ui:repeat>
 			</div>
 		</h:form>
 	</ui:define>
